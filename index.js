@@ -24,18 +24,18 @@ client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
     const choice_rand = getRandomIntInclusive (min, max);
-    const nj;
+    const nj = " ";
 
     switch (args[0]) {
         case 'namjoon':
             if (choice_rand == min) {
-                nj = './lyher/v/nj.jpg';
+                nj = "./lyher/v/nj.jpg";
             }
             else if (choice_rand == 2) {
-                nj = './lytear/o/nj.jpg';
+                nj = "./lytear/o/nj.jpg";
             }         
             else if (choice_rand == max) {
-                nj = './dynamite/nj.jpg';
+                nj = "./dynamite/nj.jpg";
             }
 
             message.channel.send(nj_quote, { files: [nj] });
