@@ -1,7 +1,9 @@
 const Discord = require ('discord.js');
-const { prefix, token } = require('./config.json')
+//const { prefix, token } = require('./config.json')
 const { nj_quote, sj_quote, yg_quote, hs_quote, jm_quote, th_quote, jk_quote } = require('./config.json')
 const client = new Discord.Client();
+
+const prefix = '&';
 
 client.on('ready', () => {
 	console.log('Ready! Bot is online :)');
@@ -36,4 +38,4 @@ client.on('message', message => {
     }
 })
 
-client.login(token);
+client.login(process.env.token); //heroku will pass information
