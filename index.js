@@ -6,7 +6,8 @@ const client = new Discord.Client();
 const prefix = '&';
 
 client.on('ready', () => {
-	console.log('Ready! Bot is online :)');
+    console.log('Ready! Bot is online :)');
+    client.user.setActivity('Love yourself ❤')
 });
 
 client.on('message', message => {
