@@ -12,4 +12,4 @@ To get a quote from any member, type & followed by their romanized Korean name.
 | ---------------------|
 | &yoongi              |
 
-Please remember to change the token to your own bot's token.
+Bot is hosted through Heroku. If you want to self-host this bot, please name your config var as token and enter your own bot's token.
