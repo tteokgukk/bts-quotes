@@ -13,6 +13,7 @@ client.on('ready', () => {
     client.user.setActivity('Love yourself ❤')
 });
 
+
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -25,12 +26,12 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'namjoon':
-            //const rand = getRandomIntInclusive ();
-            const rand = Math.floor(Math.random()*2);
-            if (rand == 1) {
+            const nj_random = getRandomIntInclusive (min, max);
+            //const rand = Math.floor(Math.random()*2);
+            if (nj_random == min) {
                 message.channel.send(nj_quote, { files: ['./namjoon/nj_lyher.jpg'] });
             }
-            else if (rand == 2) {
+            else if (nj_random == max) {
                 message.channel.send(nj_quote, { files: ['./namjoon/nj_test.jpg'] });
             }
         break;
