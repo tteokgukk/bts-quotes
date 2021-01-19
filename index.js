@@ -4,7 +4,7 @@ const { nj_quote, sj_quote, yg_quote, hs_quote, jm_quote, th_quote, jk_quote } =
 const client = new Discord.Client();
 
 const min = 1;
-const max = 2;
+const max = 3;
 
 const prefix = '&';
 
@@ -24,15 +24,29 @@ client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
     const choice_rand = getRandomIntInclusive (min, max);
+    const nj;
 
     switch (args[0]) {
         case 'namjoon':
+            if (choice_rand == min) {
+                nj = './lyher/v/nj.jpg';
+            }
+            else if (choice_rand == 2) {
+                nj = './lytear/o/nj.jpg';
+            }         
+            else if (choice_rand == max) {
+                nj = './dynamite/nj.jpg';
+            }
+
+            message.channel.send(nj_quote, { files: [nj] });
+            
+            /*
             if (choice_rand == min) {
                 message.channel.send(nj_quote, { files: ['./lyher/v/nj.jpg'] });
             }
             else if (choice_rand == max) {
                 message.channel.send(nj_quote, { files: ['./lytear/o/nj.jpg'] });
-            }
+            } */
         break;
         case 'seokjin':
             if (choice_rand == min) {
