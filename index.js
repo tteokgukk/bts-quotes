@@ -24,7 +24,7 @@ client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
     const choice_rand = getRandomIntInclusive (min, max);
-    const nj = " ";
+    var nj = " ";
 
     switch (args[0]) {
         case 'namjoon':
