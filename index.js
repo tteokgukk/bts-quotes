@@ -4,7 +4,7 @@ const { nj_quote, sj_quote, yg_quote, hs_quote, jm_quote, th_quote, jk_quote } =
 const client = new Discord.Client();
 
 const min = 1;
-const max = 3;
+const max = 4;
 
 const prefix = '&';
 
@@ -24,77 +24,127 @@ client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
     const choice_rand = getRandomIntInclusive (min, max);
-    var nj = " ";
+    var bts = " ";
 
     switch (args[0]) {
         case 'namjoon':
             if (choice_rand == min) {
-                nj = "./lyher/v/nj.jpg";
+                bts = "./lyher/v/nj.jpg";
             }
             else if (choice_rand == 2) {
-                nj = "./lytear/o/nj.jpg";
+                bts = "./lytear/o/nj.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/nj.jpg";
             }         
             else if (choice_rand == max) {
-                nj = "./dynamite/nj.jpg";
+                bts = "./dynamite/nj.jpg";
             }
 
-            message.channel.send(nj_quote, { files: [nj] });
-            
-            /*
-            if (choice_rand == min) {
-                message.channel.send(nj_quote, { files: ['./lyher/v/nj.jpg'] });
-            }
-            else if (choice_rand == max) {
-                message.channel.send(nj_quote, { files: ['./lytear/o/nj.jpg'] });
-            } */
+            message.channel.send(nj_quote, { files: [bts] });
+  
         break;
         case 'seokjin':
             if (choice_rand == min) {
-                message.channel.send(sj_quote, { files: ['./lyher/v/sj.jpg'] });
+                bts = "./lyher/v/sj.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/sj.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/sj.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(sj_quote, { files: ['./lytear/o/sj.jpg'] });
+                bts = "./dynamite/sj.jpg";
             }
+
+            message.channel.send(sj_quote, { files: [bts] });
+  
         break;
         case 'yoongi':
             if (choice_rand == min) {
-                message.channel.send(yg_quote, { files: ['./lyher/v/yg.jpg'] });
+                bts = "./lyher/v/yg.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/yg.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/yg.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(yg_quote, { files: ['./lytear/o/yg.jpg'] });
+                bts = "./dynamite/yg.jpg";
             }
+
+            message.channel.send(yg_quote, { files: [bts] });
+  
         break;
         case 'hoseok':
             if (choice_rand == min) {
-                message.channel.send(hs_quote, { files: ['./lyher/v/hs.jpg'] });
+                bts = "./lyher/v/hs.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/hs.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/hs.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(hs_quote, { files: ['./lytear/o/hs.jpg'] });
+                bts = "./dynamite/hs.jpg";
             }
+
+            message.channel.send(hs_quote, { files: [bts] });
+  
         break;
         case 'jimin':
             if (choice_rand == min) {
-                message.channel.send(jm_quote, { files: ['./lyher/v/jm.jpg'] });
+                bts = "./lyher/v/jm.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/jm.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/jm.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(jm_quote, { files: ['./lytear/o/jm.jpg'] });
+                bts = "./dynamite/jm.jpg";
             }
+
+            message.channel.send(jm_quote, { files: [bts] });
+  
         break;
         case 'taehyung':
             if (choice_rand == min) {
-                message.channel.send(th_quote, { files: ['./lyher/v/th.jpg'] });
+                bts = "./lyher/v/th.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/th.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/th.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(th_quote, { files: ['./lytear/o/th.jpg'] });
+                bts = "./dynamite/th.jpg";
             }
+
+            message.channel.send(th_quote, { files: [bts] });
+  
         break;
         case 'jungkook':
             if (choice_rand == min) {
-                message.channel.send(jk_quote, { files: ['./lyher/v/jk.jpg'] });
+                bts = "./lyher/v/jk.jpg";
             }
+            else if (choice_rand == 2) {
+                bts = "./lytear/o/jk.jpg";
+            }
+            else if (choice_rand == 3) {
+                bts = "./lyanswer/s/jk.jpg";
+            }         
             else if (choice_rand == max) {
-                message.channel.send(jk_quote, { files: ['./lytear/o/jk.jpg'] });
+                bts = "./dynamite/jk.jpg";
             }
+
+            message.channel.send(jk_quote, { files: [bts] });
+  
         break;
     }
 })
