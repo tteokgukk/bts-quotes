@@ -28,7 +28,7 @@ client.on('message', message => {
             message.channel.send(hs_quote, { files: ['./pictures/hs_lyher.jpg'] });
         break;
         case 'jimin':
-            message.channel.send('test please fucking work pt2', { files: ['./pictures/jm_lyher.jpg'] });
+            message.channel.send(jm_quote, { files: ['./pictures/jm_lyher.jpg'] });
         break;
         case 'taehyung':
             message.channel.send(th_quote, { files: ['./pictures/th_lyher.jpg'] });
