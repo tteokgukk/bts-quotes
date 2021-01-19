@@ -3,6 +3,9 @@ const Discord = require ('discord.js');
 const { nj_quote, sj_quote, yg_quote, hs_quote, jm_quote, th_quote, jk_quote } = require('./config.json')
 const client = new Discord.Client();
 
+const min = 1;
+const max = 2;
+
 const prefix = '&';
 
 client.on('ready', () => {
@@ -10,13 +13,26 @@ client.on('ready', () => {
     client.user.setActivity('Love yourself ❤')
 });
 
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+  }
+
 client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0]) {
         case 'namjoon':
-            message.channel.send(nj_quote, { files: ['./pictures/nj_lyher.jpg'] });
+            //const rand = getRandomIntInclusive ();
+            const rand = Math.floor(Math.random()*2);
+            if (rand == 1) {
+                message.channel.send(nj_quote, { files: ['./namjoon/nj_lyher.jpg'] });
+            }
+            else if (rand == 2) {
+                message.channel.send(nj_quote, { files: ['./namjoon/nj_test.jpg'] });
+            }
         break;
         case 'seokjin':
             message.channel.send(sj_quote, { files: ['./pictures/sj_lyher.jpg'] });
