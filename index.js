@@ -1,7 +1,6 @@
 const Discord = require ('discord.js');
 //const { prefix, token } = require('./config.json')
-const { quote8, quote9, quote10, quote11, quote12, quote13, quote14, quote15, quote16 } = require('./config.json')
-const { quote1, quote2, quote3, quote4, quote5, quote6, quote7 } = require('./config.json')
+const { quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10, quote11, quote12, quote13, quote14, quote15, quote16 } = require('./config.json')
 const client = new Discord.Client();
 
 const min = 1;
