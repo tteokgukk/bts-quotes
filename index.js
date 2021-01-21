@@ -1,6 +1,7 @@
 const Discord = require ('discord.js');
 //const { prefix, token } = require('./config.json')
-const { nj_quote, sj_quote, yg_quote, hs_quote, jm_quote, th_quote, jk_quote } = require('./config.json')
+const { quote8, quote9, quote10, quote11, quote12, quote13, quote14, quote15, quote16 } = require('./config.json')
+const { quote1, quote2, quote3, quote4, quote5, quote6, quote7 } = require('./config.json')
 const client = new Discord.Client();
 
 const min = 1;
@@ -24,7 +25,58 @@ client.on('message', message => {
 
     let args = message.content.substring(prefix.length).split(" ");
     const choice_rand = getRandomIntInclusive (min, max);
+    const choice_quote = getRandomIntInclusive (1, 16);
     var bts = " ";
+    var quote = " ";
+
+    if (choice_quote == 1) {
+        quote = quote1;
+    }
+    else if (choice_quote == 2) {
+        quote = quote2;
+    }
+    else if (choice_quote == 3) {
+        quote = quote3;
+    }
+    else if (choice_quote == 4) {
+        quote = quote4;
+    }
+    else if (choice_quote == 5) {
+        quote = quote5;
+    }
+    else if (choice_quote == 6) {
+        quote = quote6;
+    }
+    else if (choice_quote == 7) {
+        quote = quote7;
+    }
+    else if (choice_quote == 8) {
+        quote = quote8;
+    }
+    else if (choice_quote == 9) {
+        quote = quote9;
+    }
+    else if (choice_quote == 10) {
+        quote = quote10;
+    }
+    else if (choice_quote == 11) {
+        quote = quote11;
+    }
+    else if (choice_quote == 12) {
+        quote = quote12;
+    }
+    else if (choice_quote == 13) {
+        quote = quote13;
+    }
+    else if (choice_quote == 14) {
+        quote = quote14;
+    }
+    else if (choice_quote == 15) {
+        quote = quote15;
+    }
+    else if (choice_quote == 16) {
+        quote = quote16;
+    }
 
     switch (args[0]) {
         case 'namjoon':
@@ -41,7 +93,7 @@ client.on('message', message => {
                 bts = "./dynamite/nj.jpg";
             }
 
-            message.channel.send(nj_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
         case 'seokjin':
@@ -58,7 +110,7 @@ client.on('message', message => {
                 bts = "./dynamite/sj.jpg";
             }
 
-            message.channel.send(sj_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
         case 'yoongi':
@@ -75,7 +127,7 @@ client.on('message', message => {
                 bts = "./dynamite/yg.jpg";
             }
 
-            message.channel.send(yg_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
         case 'hoseok':
@@ -92,7 +144,7 @@ client.on('message', message => {
                 bts = "./dynamite/hs.jpg";
             }
 
-            message.channel.send(hs_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
         case 'jimin':
@@ -109,8 +161,8 @@ client.on('message', message => {
                 bts = "./dynamite/jm.jpg";
             }
 
-            message.channel.send(jm_quote, { files: [bts] });
-  
+            message.channel.send(quote, { files: [bts] });
+
         break;
         case 'taehyung':
             if (choice_rand == min) {
@@ -126,7 +178,7 @@ client.on('message', message => {
                 bts = "./dynamite/th.jpg";
             }
 
-            message.channel.send(th_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
         case 'jungkook':
@@ -143,7 +195,7 @@ client.on('message', message => {
                 bts = "./dynamite/jk.jpg";
             }
 
-            message.channel.send(jk_quote, { files: [bts] });
+            message.channel.send(quote, { files: [bts] });
   
         break;
     }
